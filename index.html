@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Single channel</title>
+  </head>
+  <body>
+    <header>
+      <h1>Single channel Queue</h1>
+    </header>
+    <section>
+    <div class="container">
+        <!--TBA section:info only-->
+    <div class="TBA-container">
+        <div class="info-title">
+            <h3>Distribution Of Time Between Arrivals</h3>
+        </div>
+        <div class="TBA">
+            <div class="row">
+                <div class="TBA-left col-md-6">
+                    <!--TBA section:example table-->
+                    <table class="table table-dark table-bordered table-hover TBA-info-Table">
+                        <thead>
+                        <tr>
+                            <th>Time Between Arrival</th>
+                            <th>Probability</th>
+                            <th>Cumulative Probability</th>
+                            <th>Random Range</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>0.125</td>
+                            <td>0.125</td>
+                            <td>001-125</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>0.125</td>
+                            <td>0.250</td>
+                            <td>126-250</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>0.125</td>
+                            <td>0.375</td>
+                            <td>251-375</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>0.125</td>
+                            <td>0.500</td>
+                            <td>376-500</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>0.125</td>
+                            <td>0.625</td>
+                            <td>501-625</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>0.125</td>
+                            <td>0.750</td>
+                            <td>626-750</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>0.125</td>
+                            <td>0.875</td>
+                            <td>751-875</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>0.125</td>
+                            <td>1</td>
+                            <td>876-1000</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--TBA section:example table-->
+                </div>
+                <div class="TBA-right col-md-6">
+                   <div class="info-ST-container">
+
+
+        <div class="info-TBA-container">
+            <div class="info-title">
+                <h3>Table Of Service Time Distribution</h3>
+            </div>
+            <div class="info-TBA">
+                    <!--TBA section: example ST Table-->
+                    <div class="TBA-right col-md-6">
+                        <table class="table table-dark table-bordered table-hover TBA-info-Table">
+                            <thead>
+                            <tr>
+                                <th>Service Time</th>
+                                <th>Probability</th>
+                                <th>Cumulative Probability</th>
+                                <th>Random Range</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>0.10</td>
+                                <td>0.10</td>
+                                <td>01-10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0.20</td>
+                                <td>0.30</td>
+                                <td>11-30</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>0.30</td>
+                                <td>0.60</td>
+                                <td>31-60</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>0.25</td>
+                                <td>0.85</td>
+                                <td>61-85</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>0.10</td>
+                                <td>0.95</td>
+                                <td>86-95</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>0.05</td>
+                                <td>1</td>
+                                <td>96-100</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    </div>
+    </section>
+    <div class="container">
+        <!--step3:Simulation Table Generation-->
+        <div class="SQC-step-container">
+            <div class="SQC-step3">
+                <div class="info-title info-title-final info-title-step3">
+                    <h3><span>Step #3</span>Generating Simulation table</h3>
+                    <hr class="step-title hr-final">
+                </div>
+                <div class="info-Simulation">
+                    <div class="row">
+                        <div class="SQC-Simulation-input-container col-md-8">
+                            <div class="input-Simulation">
+                                <span class="error msg" id="msgSimulation" >Please enter customer number first</span>
+                                <div class="input-group">
+                                    <!--MAX customers-->
+                                    <label for="customerNum" class="input-label mr-2"><span>Number of Customers:</span></label>
+                                    <input class="input-field ml-2 " type="number" name="customerNum" id="customerNum">
+                                </div>
+                                <!--Random number type-->
+                                <div class="input-group">
+                                    <label for="Simulation-random-Type" class="input-label mr-2"><span>Random (TBA)</span>:</label>
+                                    <div class="Simulation-random-Type ml-2 " id="Simulation-random-Type">
+                                        <div class="row">
+
+
+                                           <!--  <label for="manual_Simulation_Randoms" class="radio">
+                                                <input type="radio" name="Simulation-probability"
+                                                       id="manual_Simulation_Randoms" class="hidden"/>
+                                                <span class="label"></span> Manual Input
+                                            </label> -->
+
+                                            <label for="auto_Simulation_Randoms" class="radio" id="simulation_auto_label">
+                                                <input type="radio" checked name="Simulation-probability"
+                                                       id="auto_Simulation_Randoms" class="hidden"/>
+                                                <span class="label"></span>Auto Generated
+                                            </label>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <!--Manual Random number input fields(generated depending on previous choice-->
+                               <!--  <div class="input-group Simulation_Generated_container disabled">
+                                    <label for="Simulation-random-numbers" class="input-label mr-2"><span>Enter Random Numbers:</span></label>
+                                    <div class="ST-probabilities ml-2 " id="Simulation-random-numbers">
+                                        <p class="digitMessage" id="digitMessageSimulation">Enter Random values for TBA</p>
+                                        <div class="row" id="Simulation_Generated_Fields">
+
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+ -->
+
+                                <!--Random number type-->
+                                <div class="input-group">
+                                    <label for="Simulation-random-Type" class="input-label mr-2"><span>Random (service)</span>:</label>
+                                    <div class="Simulation-random-Type ml-2 " id="Simulation-random-service">
+                                        <div class="row">
+
+
+                                            <!-- <label for="manual_Simulation_Randoms_Service" class="radio">
+                                                <input type="radio" name="Simulation-probability-service"
+                                                       id="manual_Simulation_Randoms_Service" class="hidden"/>
+                                                <span class="label"></span> Manual Input
+                                            </label> -->
+
+                                            <label for="auto_Simulation_Randoms_Service" class="radio" id="simulation_auto_label_service">
+                                                <input type="radio" checked name="Simulation-probability-service"
+                                                       id="auto_Simulation_Randoms_Service" class="hidden"/>
+                                                <span class="label"></span>Auto Generated
+                                            </label>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <!--Manual Random number input fields(generated depending on previous choice-->
+                               <!--  <div class="input-group Simulation_Generated_container_service disabled">
+                                    <label for="Simulation-random-numbers" class="input-label mr-2"><span>Enter Random Numbers:</span></label>
+                                    <div class="ST-probabilities ml-2 " id="Simulation-random-numbers_service">
+                                        <p class="digitMessage" id="digitMessageSimulation_service">Enter Random values for Service Time</p>
+                                        <div class="row" id="Simulation_Generated_Fields_service">
+
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div> -->
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <!--Button: Final Solve button to generate simulation table-->
+                            <div class="input-group">
+                                <button class="btn-simulation" id="generateSimulation_btn">SOLVE<i class="fa fa-chevron-down"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="SQC-Simulation-output-container">
+                        <!--output:Simulation table-->
+                        <div id="tableContainerSimulation">
+                        <table class="SQC-Simulation-output-table table table-dark table-bordered table-hover Simulation-info-Table Simulation_output_table" id="SQC-Simulation-output-table">
+                            <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>TBA</th>
+                                <th>AT</th>
+                                <th>ST</th>
+                                <th>TSB</th>
+                                <th>TCW</th>
+                                <th>TSE</th>
+                                <th>TCS</th>
+                                <th>IS</th>
+                            </tr>
+                            </thead>
+                            <tbody id="outputSimulation_table_content">
+
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                                <td>NA</td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cb85dba142.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+header h1 {
+    text-align: center;
+    margin: 30px auto;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.info-title.info-title-final.info-title-step3 h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.info-title.info-title-final.info-title-step3 h3 span {
+    display: block;
+    padding-bottom: 20px;
+}
+
+button#generateSimulation_btn {
+    font-weight: 500;
+    background: green;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    transition: .3s;
+    margin-top: 30px;
+}
+button#generateSimulation_btn i {
+    padding-left: 10px;
+    font-size: 15px;
+}
+button#generateSimulation_btn:hover {
+    background: #333;
+}
