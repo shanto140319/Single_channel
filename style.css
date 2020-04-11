@@ -32,3 +32,24 @@ button#generateSimulation_btn i {
 button#generateSimulation_btn:hover {
     background: #333;
 }
+button {
+    border: navajowhite;
+    background: #333;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 3px;
+    transition: .3s;
+}
+button#tba {
+    margin-top: 40px;
+}
+button#st {
+    float: right;
+}
+button:hover {
+    background: green;
+}
+.generateTba {
+    margin-bottom: 45px;
+    margin-top: 30px;
+}
