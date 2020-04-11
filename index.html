@@ -161,6 +161,125 @@
     <hr>
     </div>
     </section>
+
+
+    <div class="generateTba">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Generating TBA Table</h1>
+            <table class="table table-dark table-bordered table-hover TBA-info-Table TBA_output_table"
+                                                               id="outputTBA_table">
+                                <thead>
+                                <tr>
+                                    <th>Time Between Arrival</th>
+                                    <th>Probability</th>
+                                    <th>Cumulative Probability</th>
+                                    <th>Random Range</th>
+                                </tr>
+                                </thead>
+                                <tbody id="outputTBA_table_content">
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                             <button id="tba">Generate TBA Table</button>
+          </div>
+           <div class="col-md-6">
+            <h1>Generating SERVICE TIME Table</h1>
+            <table class="table table-dark table-bordered table-hover TBA-info-Table TBA_output_table"
+                                                               id="outputTBA_table">
+                                <thead>
+                                <tr>
+                                    <th>Service Time</th>
+                                    <th>Probability</th>
+                                    <th>Cumulative Probability</th>
+                                    <th>Random Range</th>
+                                </tr>
+                                </thead>
+                                <tbody id="outputTBA_table_content">
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                    <td>NA</td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                            <button id="st">Generate ST Table</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
     <div class="container">
         <!--step3:Simulation Table Generation-->
         <div class="SQC-step-container">
@@ -185,6 +304,8 @@
                                     <div class="Simulation-random-Type ml-2 " id="Simulation-random-Type">
                                         <div class="row">
 
+
+
                                             <label for="auto_Simulation_Randoms" class="radio" id="simulation_auto_label">
                                                 <input type="radio" checked name="Simulation-probability"
                                                        id="auto_Simulation_Randoms" class="hidden"/>
@@ -198,23 +319,7 @@
 
                                 </div>
 
-                                <!--Manual Random number input fields(generated depending on previous choice-->
-                               <!--  <div class="input-group Simulation_Generated_container disabled">
-                                    <label for="Simulation-random-numbers" class="input-label mr-2"><span>Enter Random Numbers:</span></label>
-                                    <div class="ST-probabilities ml-2 " id="Simulation-random-numbers">
-                                        <p class="digitMessage" id="digitMessageSimulation">Enter Random values for TBA</p>
-                                        <div class="row" id="Simulation_Generated_Fields">
-
-
-
-
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
- -->
+              
 
                                 <!--Random number type-->
                                 <div class="input-group">
@@ -222,8 +327,6 @@
                                     <div class="Simulation-random-Type ml-2 " id="Simulation-random-service">
                                         <div class="row">
 
-
-                                          
 
                                             <label for="auto_Simulation_Randoms_Service" class="radio" id="simulation_auto_label_service">
                                                 <input type="radio" checked name="Simulation-probability-service"
@@ -238,7 +341,7 @@
 
                                 </div>
 
-                   
+                              
                             </div>
 
                         </div>
